@@ -10,6 +10,10 @@ while (homeTeam === awayTeam) {
 }
 
 const awayScore = randomScore();
-const homeScore = randomScore() + 10;
+let homeScore = randomScore() + 5;
+
+while (homeScore === awayScore) {
+  homeScore = randomScore() + 5;
+}
 
 console.log(`NBA Prediction:\n${awayTeam} @ ${homeTeam}\nFinal score: ${awayScore} - ${homeScore}`);
